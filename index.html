@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Galeria</title>
+</head>
+
+<body>
+    <header class="header-gallery">
+        <nav class="header-gallery__nav menu--disable">
+            <ul class="header-gallery_menu menu--disable">
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Encomenda</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+        <div class="header-gallery__logo">
+            <a href="index.html">Galerix</a>
+        </div>
+
+        <form class="header-gallery__search">
+            <input type="search" placeholder="Buscar obras...">
+            <button type="submit"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-search-icon lucide-search">
+                    <path d="m21 21-4.34-4.34" />
+                    <circle cx="11" cy="11" r="8" />
+                </svg></button>
+        </form>
+
+        <nav class="header-gallery__nav">
+            <ul class="header-gallery__menu">
+                <li><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-user-icon lucide-user">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </a></li>
+                <li><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+                            <circle cx="8" cy="21" r="1" />
+                            <circle cx="19" cy="21" r="1" />
+                            <path
+                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                        </svg>
+                    </a></li>
+                <li><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-menu-icon lucide-menu">
+                            <path d="M4 5h16" />
+                            <path d="M4 12h16" />
+                            <path d="M4 19h16" />
+                        </svg>
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero">
+        <section class="hero-gallery">
+            <div class="hero-gallery__content">
+                <h1>A boa arte transforma vidas</h1>
+                <p>Descubra obras únicas criadas por artistas contemporâneos. Cada peça é escolhida para levar
+                    personalidade, elegância e significado ao seu espaço.</p>
+                <div class="btn">
+                    <a class="hero-gallery__btn" href="#">Explorar coleção</a>
+                </div>
+                <a class="hero-gallery__guarantee" href="#">
+                    Leia sobre nossa garantia de satisfação
+                </a>
+            </div>
+            <div class="hero-gallery__img">
+                <a href="#"><img src="img/hero1.jpg" alt="hero image"></a>
+            </div>
+        </section>
+        <section class="card-art">
+            <article class="card-art__container">
+                <div class="card-art__img">
+                    <a href="#"><img src="img/2.jpg" alt=""></a>
+                </div>
+                <div class="card-art__content">
+                    <h2>Prontas para impressionar</h2>
+                    <p>Obras finalizadas e disponíveis para envio imediato. Escolha a peça perfeita e receba em casa
+                        pronta para transformar seu ambiente</p>
+                </div>
+                <div class="btn">
+                    <a class="card-art__btn" href="#">Obras Disponíveis</a>
+                </div>
+            </article>
+            <article class="card-art__container">
+                <div class="card-art__img">
+                    <a href="#"><img src="img/1.jpg" alt=""></a>
+                </div>
+                <div class="card-art__content">
+                    <h2>Arte criada para você</h2>
+                    <p>Transforme sua ideia, memória ou inspiração em uma obra exclusiva. Trabalhamos com artistas que
+                        desenvolvem peças personalizadas sob medida.</p>
+                </div>
+                <div class="btn">
+                    <a class="card-art__btn" href="#">Solicitar Encomenda</a>
+                </div>
+            </article>
+            <article class="card-art__container">
+                <div class="card-art__img">
+                    <a href="#"><img src="img/pexels-griffin-shy-701645713-18476492.jpg" alt=""></a>
+                </div>
+                <div class="card-art__content">
+                    <h2>Seleção exclusiva</h2>
+                    <p>Nossa curadoria reúne estilos variados, do contemporâneo ao clássico, com preços transparentes e
+                        qualidade garantida</p>
+                </div>
+                <div class="btn ">
+                    <a class="card-art__btn" href="#">Descobrir Favoritos</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+</body>
+
+</html>
