@@ -9,6 +9,7 @@
     --font-primary: "Playfair Display", serif;
     --font-color: rgb(121, 120, 120);
     --gray-transparent: color-mix(in srgb, var(--font-color), transparent 50%);
+    --lightblue: #add8e6;
     --background-primary: #fff;
     --background-secundary: papayawhip;
     --default-second: 0.5s;
@@ -25,12 +26,14 @@ body {
     color: var(--font-color);
 }
 
+/*===== 
+ HEADER
+ ======*/
 .header-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    margin: .5rem;
-    gap: 1rem;
+
 }
 
 .header-gallery__logo {
@@ -43,7 +46,8 @@ body {
     text-decoration: none;
     font-size: 2.3rem;
     font-weight: 500;
-
+    text-transform: uppercase;
+    letter-spacing: 2px;
     color: var(--font-color);
 }
 
@@ -59,11 +63,12 @@ body {
 
 }
 
+
 input[type="search"] {
     padding: .5rem;
     width: 100%;
     padding-right: 3rem;
-    outline: none;
+    outline: 1px solid transparent;
     border: 1px solid var(--gray-transparent);
 
 }
@@ -73,10 +78,6 @@ input[type="search"]::placeholder {
     color: var(--gray-transparent);
 }
 
-/* input[type="search"]:hover::placeholder{
-    padding: 0 0 0 .5rem;
-    color: white;
-} */
 
 button {
     cursor: pointer;
@@ -85,7 +86,7 @@ button {
     right: 1rem;
     color: var(--gray-transparent);
     transform: translateY(-50%);
-    background-color: var(--background-primary);
+    background-color: transparent;
     border: none;
 }
 
@@ -102,9 +103,18 @@ button {
     list-style-type: none;
 }
 
+.header-gallery__menu a {
+    color: transparent;
+    font-size: 0;
+}
+
 .header-gallery__nav svg {
     color: var(--font-color);
 }
+
+/*======
+   MAIN
+========*/
 
 .hero {
     margin: 1.5rem 0 0 0;
@@ -120,23 +130,20 @@ button {
 
 .hero-gallery__content {
     margin: 2rem 0;
-
     padding: 0 2rem;
 
 }
 
-.hero-gallery__content h1 {
+.hero-gallery__title {
     font-size: 2.5rem;
     font-weight: 500;
-
-
 }
 
 .hero-gallery__content p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 300;
     padding: .5rem 0 0 .5rem;
-    line-height: 1.1;
+    line-height: 1.4;
     text-align: left;
 
 }
@@ -154,7 +161,7 @@ button {
     text-align: center;
     letter-spacing: .2rem;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: capitalize;
     color: #fff;
@@ -170,18 +177,22 @@ button {
 
 .hero-gallery__guarantee::after {
     content: "➝";
-    padding: 0 0 0 .2rem;
+    padding: 0 0 0 .1rem;
     display: inline-block;
 
 }
 
+/*====== 
+  CARD 
+=======*/
+
 .card-art {
     background-color: var(--background-secundary);
     padding: 3rem 1rem;
-
     display: grid;
-    gap: 1rem;
+    gap: .5rem;
 }
+
 
 .card-art__container {
     text-align: left;
@@ -229,7 +240,7 @@ img {
 
 
 /*======================= 
-mudança do header 31.25em
+ RESPONSIVIDADE 31.25em
 =========================*/
 
 @media screen and (min-width: 31.25em) {
@@ -242,7 +253,7 @@ mudança do header 31.25em
     .header-gallery {
         display: flex;
         align-items: center;
-        margin: .5em;
+        padding: 0 .5em;
         gap: 1em;
     }
 
@@ -265,25 +276,37 @@ mudança do header 31.25em
 
     input[type="search"] {
 
-        padding: .5em;
+        padding: .2em .2em;
         width: 100%;
 
-        outline: none;
+        outline: 1px solid transparent;
         border-color: var(--gray-transparent);
 
     }
+
+
+    button svg {
+        max-width: 1.2em;
+        padding-top: .1em;
+    }
+
 }
 
 
-/*===========
-mudança 48em
-=============*/
+/*==================
+ RESPONSIVIDADE 48em
+===================*/
 
 @media screen and (min-width: 48em) {
+
+    .header-gallery {
+        padding: 0 1em;
+    }
+
     .hero-gallery {
         flex-direction: row;
         align-items: center;
-        gap: 0;
+
     }
 
     .hero-gallery__img {
@@ -293,11 +316,26 @@ mudança 48em
     .hero-gallery__content {
         display: inline-block;
         text-align: left;
-        margin: 0;
-        padding: 0 2em;
+        margin: 0 2em 1em 2em;
+        padding: 0;
+    }
+
+    .header-gallery__logo a{
+        transition: color var(--default-second) ease;
+    }
+
+     .header-gallery__logo a:hover{
+        color: var(--lightblue);
     }
 
 
+    .hero-gallery__guarantee {
+        font-size: 1.1em;
+    }
+
+    .hero-gallery__title {
+        font-size: 2.5em;
+    }
 
     .hero-gallery__btn {
         text-align: center;
@@ -306,7 +344,7 @@ mudança 48em
     }
 
     .hero-gallery__btn:hover {
-        background-color: lightblue;
+        background-color: var(--lightblue);
         color: black;
     }
 
@@ -320,5 +358,132 @@ mudança 48em
     }
 
 
+    .header-gallery__nav svg{
+        transition: color var(--default-second) ease;
+    }
+
+    .header-gallery__nav svg:hover{
+        color: var(--lightblue);
+    }
+
+
+    .card-art {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .card-art__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-art__btn {
+        align-self: flex-start;
+        padding: .5rem;
+
+        transition: background-color var(--default-second) ease, 
+          border-color var(--default-second) ease;
+    }
+
+    .card-art__btn:hover{
+        background-color: var(--lightblue);
+
+        border-color: var(--lightblue);
+    }
+
+    .card-art__content p {
+        font-size: 1.1em;
+        font-weight: 100;
+
+    }
+
+
+
+
+}
+
+
+/*===================
+ RESPONSIVIDADE 64em
+====================*/
+
+@media screen and (min-width: 64em) {
+
+    .hero-gallery__content {
+        margin: 0 0 3em 3em;
+
+
+    }
+
+    .hero-gallery__title {
+        font-size: 3.5em;
+    }
+}
+
+/*===================
+ RESPONSIVIDADE 75em
+====================*/
+
+@media screen and (min-width: 75em) {
+
+    .menu--active {
+        display: flex;
+    }
+
+    .icon--disable {
+        display: none
+    }
+
+    .header-gallery {
+        align-items: center;
+        background-color: var(--background-primary);
+        padding: .5em;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+    }
+
+    .header-gallery__logo {
+        margin-left: auto;
+        padding: 0;
+    }
+
+     .header-gallery__menu a {
+        text-decoration: none;
+        font-size: 1.1em;
+        color: var(--font-color);
+        letter-spacing: 1px;
+        padding-bottom: .2em;
+        border-bottom: 2px solid transparent;
+
+        transition: color var(--default-second) ease;
+    }
+
+    .header-gallery__menu a:hover{
+      border-bottom: 2px solid var(--font-color);
+      color: var(--lightblue);
+    }
+    
+
+    .hero-gallery {
+        gap: .1em;
+        justify-content: space-around;
+
+    }
+
+    .hero-gallery__content {
+        margin: 0 2em;
+        width: 30ch;
+    }
+
+    .hero-gallery__title {
+        font-size: 4em;
+
+    }
+
+    .card-art__img {
+        aspect-ratio: 3 / 4;
+    }
 
 }

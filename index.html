@@ -16,8 +16,8 @@
 
 <body>
     <header class="header-gallery">
-        <nav class="header-gallery__nav menu--disable">
-            <ul class="header-gallery_menu menu--disable">
+        <nav class="header-gallery__nav menu--disable menu--active">
+            <ul class="header-gallery__menu menu--disable menu--active">
                 <li><a href="#">Galeria</a></li>
                 <li><a href="#">Encomenda</a></li>
                 <li><a href="#">Categorias</a></li>
@@ -30,8 +30,8 @@
 
         <form class="header-gallery__search">
             <input type="search" placeholder="Buscar obras...">
-            <button type="submit"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-search-icon lucide-search">
                     <path d="m21 21-4.34-4.34" />
                     <circle cx="11" cy="11" r="8" />
@@ -43,25 +43,28 @@
                 <li><a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-user-icon lucide-user">
+                            class="lucide lucide-user-icon lucide-user icon--disable">
                             <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
                             <circle cx="12" cy="7" r="4" />
                         </svg>
+                        Entrar
                     </a></li>
                 <li><a href="#">
+                    
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+                            class="lucide lucide-shopping-cart-icon lucide-shopping-cart icon--disable">
                             <circle cx="8" cy="21" r="1" />
                             <circle cx="19" cy="21" r="1" />
                             <path
                                 d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
                         </svg>
+                        Carrinho
                     </a></li>
-                <li><a href="#">
+                <li><a class="" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-menu-icon lucide-menu">
+                            class="lucide lucide-menu-icon lucide-menu icon--disable">
                             <path d="M4 5h16" />
                             <path d="M4 12h16" />
                             <path d="M4 19h16" />
@@ -73,14 +76,14 @@
     <main class="hero">
         <section class="hero-gallery">
             <div class="hero-gallery__content">
-                <h1>A boa arte transforma vidas</h1>
+                <h1 class="hero-gallery__title">A boa arte transforma vidas</h1>
                 <p>Descubra obras únicas criadas por artistas contemporâneos. Cada peça é escolhida para levar
                     personalidade, elegância e significado ao seu espaço.</p>
                 <div class="btn">
                     <a class="hero-gallery__btn" href="#">Explorar coleção</a>
                 </div>
                 <a class="hero-gallery__guarantee" href="#">
-                    Leia sobre nossa garantia de satisfação
+                    Sobre garantia e satisfação
                 </a>
             </div>
             <div class="hero-gallery__img">
@@ -97,9 +100,9 @@
                     <p>Obras finalizadas e disponíveis para envio imediato. Escolha a peça perfeita e receba em casa
                         pronta para transformar seu ambiente</p>
                 </div>
-                
-                    <a class="card-art__btn" href="#">Obras Disponíveis</a>
-                
+
+                <a class="card-art__btn" href="#">Obras Disponíveis</a>
+
             </article>
             <article class="card-art__container">
                 <div class="card-art__img">
@@ -110,9 +113,9 @@
                     <p>Transforme sua ideia, memória ou inspiração em uma obra exclusiva. Trabalhamos com artistas que
                         desenvolvem peças personalizadas sob medida.</p>
                 </div>
-               
-                    <a class="card-art__btn" href="#">Solicitar Encomenda</a>
-                
+
+                <a class="card-art__btn" href="#">Solicitar Encomenda</a>
+
             </article>
             <article class="card-art__container">
                 <div class="card-art__img">
@@ -123,9 +126,9 @@
                     <p>Nossa curadoria reúne estilos variados, do contemporâneo ao clássico, com preços transparentes e
                         qualidade garantida</p>
                 </div>
-                
-                    <a class="card-art__btn" href="#">Descobrir Favoritos</a>
-                
+
+                <a class="card-art__btn" href="#">Descobrir Favoritos</a>
+
             </article>
 
         </section>
